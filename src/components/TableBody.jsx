@@ -8,7 +8,7 @@ import TableRow from "./TableRow"
 const TableBody = () => {
     const [flights, setFlights] = useState(null)
     const getFlights = () => {
-        fetch("http://localhost:8000/flights")
+        fetch("https://flights-widget.netlify.app/flights")
             .then(response => response.json())
             .then(flights => setFlights(Object.values(flights.data)))
             .catch(err => console.error(err))
